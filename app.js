@@ -11,6 +11,5 @@ app.use(express.json());
 app.use(express.urlencoded({ extended : false}))
 app.use('/api/user',router)
 
-// app.post("/", ()=> console.log("hello"))
 
 app.listen(8080)
