@@ -7,7 +7,16 @@ const User = require("./model/User")
 const router = require('./routers/server')
 const app = express();
 
-app.use(cors())
+
+
+var options = {
+    "origin": "*",
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "preflightContinue": false,
+    "optionsSuccessStatus": 204
+  }
+  app.use(cors(options));
+// app.use(cors())
 
 app.use(express.json());
 app.use(express.urlencoded({ extended : false}))
